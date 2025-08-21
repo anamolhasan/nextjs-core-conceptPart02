@@ -14,7 +14,7 @@ const Posts = async() => {
       {
         posts.map((singlePost) => {
           return (
-            <div key={singlePost.id} className='border p-4'>
+            <div key={singlePost.id} className='border-2 border-slate-300 p-4'>
               <p>{singlePost.title}</p>
               <p>{singlePost.body}</p>
               <Link href={`/posts/${singlePost.id}`}>Details Post</Link>
