@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MealSearchInput from "./components/MealSearchInput"
+import Image from "next/image";
 
 
 export const metadata = {
@@ -33,6 +34,10 @@ const meals = await fetchMeals()
             meals?.map((singleMeal) =>{
                 return(
                     <div key={singleMeal?.idMeal}>
+                      <Image  src={singleMeal?.strMealThumb || "/fallback.png"}
+                      width={641} 
+                      height={641} 
+                      alt={singleMeal?.strMeal} />
                         <p>{singleMeal?.strMeal}</p>
                         <p>{singleMeal?.strInstructions}</p>
                         <Link href={`meals/${singleMeal.idMeal}`}>Details</Link>
