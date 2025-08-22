@@ -1,7 +1,12 @@
 import Link from "next/link";
 import MealSearchInput from "./components/MealSearchInput"
 import Image from "next/image";
+import { Roboto } from "next/font/google";
 
+const roboto = Roboto({
+  weight:['400', '600','700'],
+  subsets:['latin']
+})
 
 export const metadata = {
   title: "All Meals ",
@@ -33,7 +38,7 @@ const meals = await fetchMeals()
         {
             meals?.map((singleMeal) =>{
                 return(
-                    <div key={singleMeal?.idMeal}>
+                    <div key={singleMeal?.idMeal} className={`${roboto.className}`}>
                       <Image  src={singleMeal?.strMealThumb || "/fallback.png"}
                       width={641} 
                       height={641} 
