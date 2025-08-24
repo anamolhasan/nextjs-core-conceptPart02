@@ -1,7 +1,9 @@
 import React from 'react'
 
 const ProductsPage = async() => {
-    const res = await fetch('http://localhost:3000/api/items')
+    const res = await fetch('http://localhost:3000/api/items',{
+      cache: 'force-cache'
+    })
     const data = await res.json()
   return (
     <div>

@@ -15,6 +15,8 @@ const ProductAddForm = () => {
         })
         const result = await res.json()
         console.log(result)
+        form.reset()
+        alert('product added')
     }
   return (
     <div className="text-center py-5 font-bold">
