@@ -1,6 +1,9 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+
 const ProductAddForm = () => {
+    const router = useRouter()
     const handleSubmit = async(e) => {
         e.preventDefault()
         const form = e.target 
@@ -16,7 +19,9 @@ const ProductAddForm = () => {
         const result = await res.json()
         console.log(result)
         form.reset()
-        alert('product added')
+        // alert('product added')
+        router.push('/products')
+        // router.refresh()
     }
   return (
     <div className="text-center py-5 font-bold">

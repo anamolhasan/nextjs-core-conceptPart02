@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 const ProductsPage = async() => {
@@ -5,6 +6,12 @@ const ProductsPage = async() => {
       cache: 'force-cache'
     })
     const data = await res.json()
+
+    // ---- conditional for redirect
+    // if(data.length > 3){
+    //       redirect('/')
+    // }
+
   return (
     <div>
       <ul className='text-3xl font-bold text-center py-5'>
