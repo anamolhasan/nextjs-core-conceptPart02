@@ -13,6 +13,8 @@ const Navbar = () => {
         <ul className='flex justify-center gap-5 py-5 bg-sky-700 '>
           <Link href={'/'}> <li>Home</li> </Link>
           <Link href={'/posts'}> <li>Posts</li> </Link>
+          <Link href={'/products'}> <li>Products</li> </Link>
+          <Link href={'/products/add'}> <li>Add Products</li> </Link>
           <Link href={'/meals'}> <li>Meals</li> </Link>
         </ul>
     </div>
