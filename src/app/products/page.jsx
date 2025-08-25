@@ -19,6 +19,7 @@ const ProductsPage = async() => {
     // }
 
    const data = await getProducts()
+   console.log(data)
 
   return (
     <div>
